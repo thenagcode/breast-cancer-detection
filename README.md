@@ -74,4 +74,38 @@ The dataset used is the **Breast Cancer Wisconsin Dataset**, a classic binary cl
 
 ---
 
-## 📂 Project Structure
+##🧠 Learning Journey
+- **Data Preprocessing:** Scaling data improves training convergence.
+
+- **Model Design:** Input → Hidden (ReLU) → Output (Sigmoid).
+
+- **Training:** Manual loops (PyTorch) vs .fit() abstraction (Keras).
+
+- **Loss Functions:** BCELoss (PyTorch) vs binary_crossentropy (Keras).
+
+- **Evaluation:** Accuracy metrics to validate performance.
+
+---
+
+##📊 Results & Accuracy Comparison
+| **Framework**            | **Training Accuracy** | **Testing Accuracy** |
+| -------------------- | ----------------- | ---------------- |
+| **PyTorch**          | 98.2%             | 97.1%            |
+| **TensorFlow/Keras** | 98.6%             | 97.5%            |
+
+
+✅ Both frameworks performed very similarly, proving that model architecture and preprocessing choices often matter more than the framework itself.
+**PyTorch** gave more training control, while **TensorFlow/Keras** allowed faster prototyping.
+
+---
+##🔍 PyTorch vs TensorFlow – Key Takeaways
+
+| Feature         | PyTorch                   | TensorFlow/Keras                          |
+| --------------- | ------------------------- | ----------------------------------------- |
+| **Control**     | ✅ High (manual loops)     | ⚠️ Lower (abstracted)                     |
+| **Ease of Use** | ⚠️ Steeper learning curve | ✅ Beginner-friendly                       |
+| **Flexibility** | ✅ Customizable            | ⚠️ Requires subclassing for customization |
+| **Community**   | Large                     | Large                                     |
+
+---
+
