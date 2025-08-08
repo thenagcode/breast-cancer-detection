@@ -1,140 +1,139 @@
-Breast Cancer Classification – PyTorch & TensorFlow Implementations
-📌 Overview
-This project demonstrates end-to-end implementation of a Breast Cancer classification model using two different deep learning frameworks – PyTorch and TensorFlow/Keras.
-It’s designed as a learning exercise to:
+🧬 Breast Cancer Classification – PyTorch & TensorFlow
 
-Understand the data preprocessing pipeline for ML/DL projects.
 
-Learn model building, training, and evaluation in both frameworks.
 
-Compare workflow similarities and differences between PyTorch and TensorFlow.
 
-Strengthen skills in binary classification problems.
 
-The dataset used is the Breast Cancer Wisconsin dataset from scikit-learn.
+📖 Overview
+This project is a side-by-side implementation of a Breast Cancer Classification model using two leading deep learning frameworks — PyTorch and TensorFlow/Keras.
+The idea was to learn by doing and compare both frameworks in terms of:
 
-🧠 Learning Goals
-Through this project, you will learn:
+Syntax & workflow
 
-Data Handling
+Training loop control vs. abstraction
 
-Loading datasets from sklearn.datasets.
+Performance and ease of implementation
 
-Exploring dataset features & targets.
+The dataset used is the Breast Cancer Wisconsin Dataset, a classic binary classification dataset available in scikit-learn.
 
-Creating pandas DataFrames for better data visualization.
+🎯 Objectives
+Learn how to load, preprocess, and split datasets for deep learning.
 
-Splitting into training and testing sets.
+Understand how binary classification works in neural networks.
 
-Data Preprocessing
+Compare manual training loops in PyTorch vs high-level APIs in TensorFlow/Keras.
 
-Standardizing features using StandardScaler for PyTorch implementation.
+Strengthen knowledge of loss functions, optimizers, and evaluation metrics.
 
-Ensuring feature scaling for better convergence.
+Build a project that can be showcased in a portfolio.
 
-Model Development
-
-PyTorch: Building custom neural networks with torch.nn.Module.
-
-TensorFlow/Keras: Using Sequential models and Dense layers.
-
-Activation functions (ReLU, Sigmoid) for classification tasks.
-
-Model Training
-
-Defining loss functions (BCELoss in PyTorch, binary_crossentropy in Keras).
-
-Choosing optimizers (Adam) and tuning learning rates.
-
-Understanding the training loop (manual in PyTorch vs built-in .fit() in Keras).
-
-Model Evaluation
-
-Accuracy calculation on both training and test datasets.
-
-Interpreting binary classification results.
-
-Comparison between Frameworks
-
-PyTorch offers more control over the training loop.
-
-TensorFlow/Keras offers ease of use with high-level APIs.
-
-🗂️ Project Structure
-bash
-Copy
-Edit
-📦 Breast-Cancer-Classification
- ┣ 📜 test_torch.ipynb     # PyTorch implementation
- ┣ 📜 test_tf.ipynb        # TensorFlow/Keras implementation
- ┣ 📜 README.md            # This file
-🛠️ Technologies Used
-Common Libraries:
+🛠️ Technologies & Libraries
+Common:
 Python 3.x
 
-NumPy – Numerical operations
+numpy, pandas – Data manipulation
 
-Pandas – Data handling
+scikit-learn – Dataset loading, train-test splitting, standardization
 
-scikit-learn – Dataset loading, preprocessing, and splitting
+matplotlib – Visualization
 
-Matplotlib – Data visualization
+PyTorch Implementation (test_torch.ipynb):
+torch – Core deep learning library
 
-PyTorch Version (test_torch.ipynb)
-PyTorch (torch, torch.nn, torch.optim) – Model creation, training, and evaluation
+torch.nn – Neural network layers
 
-TensorFlow Version (test_tf.ipynb)
-TensorFlow/Keras – High-level neural network implementation
+torch.optim – Optimizers (Adam)
 
-📊 Dataset Details
-Name: Breast Cancer Wisconsin Dataset
-Source: sklearn.datasets.load_breast_cancer()
+Manual training loop for full control
 
-Features: 30 numeric features (mean radius, mean texture, etc.)
+TensorFlow Implementation (test_tf.ipynb):
+tensorflow / keras – Model building and training
 
-Target: Binary classification –
+Sequential API for rapid prototyping
+
+Built-in .fit() training loop
+
+📊 Dataset Information
+Dataset Name: Breast Cancer Wisconsin Dataset
+Samples: 569
+Features: 30 numerical features (mean radius, texture, perimeter, etc.)
+Target:
 
 0 → Malignant
 
 1 → Benign
 
-Samples: 569
+📌 Dataset Feature Breakdown
 
-🚀 How to Run
-1️⃣ Install Requirements
+🧠 Model Architecture
+PyTorch & TensorFlow Shared Design
+Input Layer: 30 neurons (one for each feature)
+
+Hidden Layer(s): Dense layer(s) with ReLU activation
+
+Output Layer: Single neuron with Sigmoid activation for binary classification
+
+Diagram:
+
+📂 Project Structure
+bash
+Copy
+Edit
+📦 Breast-Cancer-Classification
+ ┣ 📜 test_torch.ipynb     # PyTorch version
+ ┣ 📜 test_tf.ipynb        # TensorFlow/Keras version
+ ┣ 📜 README.md            # Project documentation
+ ┣ 🖼 dataset_breakdown.png
+ ┣ 🖼 nn_architecture.png
+ ┣ 🖼 training_flow.png
+🚀 Getting Started
+1️⃣ Install dependencies
 bash
 Copy
 Edit
 pip install torch tensorflow scikit-learn pandas matplotlib
-2️⃣ Run PyTorch Version
+2️⃣ Run Jupyter Notebook
 bash
 Copy
 Edit
 jupyter notebook test_torch.ipynb
-3️⃣ Run TensorFlow Version
-bash
-Copy
-Edit
 jupyter notebook test_tf.ipynb
-📚 What I Learned
-How to prepare and preprocess tabular datasets for deep learning models.
+🧠 Learning Journey
+What I Learned
+Data Preprocessing: The importance of scaling data before training.
 
-How binary classification works with neural networks.
+Model Architecture:
 
-The importance of normalization/standardization before training.
+Input layer → Hidden layer(s) with ReLU → Output layer with Sigmoid.
 
-The difference between manual training loops (PyTorch) and automated training APIs (Keras).
+Training Loops:
 
-How to interpret classification accuracy and avoid overfitting.
+PyTorch: Fully manual loop with forward pass, loss calculation, backpropagation, and optimizer step.
 
-🔮 Future Improvements
-Add cross-validation to ensure model generalization.
+TensorFlow: Simple .fit() method handles everything internally.
 
-Implement regularization techniques (Dropout, L2 regularization).
+Loss Functions: BCELoss in PyTorch vs binary_crossentropy in Keras.
 
-Visualize loss and accuracy curves for deeper analysis.
+Evaluation: Using accuracy scores to measure model performance.
 
-Extend to multi-class classification tasks.
+🔍 Training Process Flow
+
+🔍 PyTorch vs TensorFlow – Key Takeaways
+Feature	PyTorch	TensorFlow/Keras
+Control	✅ High (manual loops)	⚠️ Lower (abstracted)
+Ease of Use	⚠️ Steeper learning curve	✅ Beginner-friendly
+Flexibility	✅ Customizable	⚠️ Requires subclassing for customization
+Community	Large	Large
+
+📈 Future Improvements
+Add Dropout layers to prevent overfitting.
+
+Implement cross-validation.
+
+Visualize loss & accuracy curves for better analysis.
+
+Extend to multi-class datasets.
 
 🏷️ License
-This project is for educational purposes only. Feel free to fork, modify, and use it to enhance your learning.
+This project is licensed under the MIT License.
+Feel free to fork, modify, and use it for learning purposes.
