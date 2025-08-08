@@ -59,13 +59,7 @@ The dataset used is the **Breast Cancer Wisconsin Dataset**, a classic binary cl
 
 ---
 
-### 📌 Dataset Feature Breakdown
-![Dataset Breakdown](assets/dataset_breakdown.png)
-
----
-
 ## 🧠 Model Architecture
-![Neural Network Architecture](assets/nn_architecture.png)
 
 **Layers:**
 - **Input Layer:** 30 neurons (features)
@@ -92,6 +86,8 @@ The dataset used is the **Breast Cancer Wisconsin Dataset**, a classic binary cl
 | -------------------- | ----------------- | ---------------- |
 | **PyTorch**          | 98.2%             | 97.1%            |
 | **TensorFlow/Keras** | 98.6%             | 97.5%            |
+
+<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/e6aa93ba-cd57-4ee4-9c2a-d32c369bdea8" />
 
 
 ✅ Both frameworks performed very similarly, proving that model architecture and preprocessing choices often matter more than the framework itself.
